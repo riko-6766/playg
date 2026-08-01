@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 📌 عنوان الفيلم فـ التبويب -->
+    <title>Spider-Man: Brand New Day - OPTIVARA</title>
+    <!-- FontAwesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ========================================================= -->
+    <!-- 📌 1️⃣ سكريبت اللوكر الخاص بك (Content Locker Script) -->
+    <!-- ========================================================= -->
+    <script type="text/javascript">
+        var SoeDk_DDX_qSVuLc={"it":4622681,"key":"a3d1a"};
+    </script>
+    <script src="https://d19k1sh57v5k0g.cloudfront.net/0384236.js"></script>
+
+    <style>
+        body {
+            background-color: #08080a;
+            color: #ffffff;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* 📌 2️⃣ خلفية الصفحة الداخلية (movie1.jpg من مجلد movie-backgrounds) */
+        .movie-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('movie-backgrounds/movie1.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: -1;
+            filter: blur(4px);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+        }
+
+        .header-brand-group {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* 📌 زر الرجوع للرئيسية المصمم بجانب اللوغو */
+        .btn-back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #e5e5e5;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 8px 18px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: 0.3s ease;
+        }
+
+        .btn-back-home:hover {
+            background: #e50914;
+            color: #fff;
+            border-color: #e50914;
+            transform: translateX(-2px);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo span { color: #e50914; }
+
+        .details-container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .poster-box {
+            width: 280px;
+            flex-shrink: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .poster-box img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .info-box { flex-grow: 1; }
+
+        .tag-movie {
+            background-color: #e50914;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .movie-title-text {
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .movie-meta-text {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .section-label {
+            color: #aaa;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .synopsis-text {
+            color: #ddd;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .cast-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 35px;
+        }
+
+        .cast-chip {
+            background: rgba(255,255,255,0.08);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #ccc;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .action-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-watch {
+            background: #ffffff;
+            color: #000000;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 800;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-watch:hover {
+            background: #e6e6e6;
+            transform: translateY(-2px);
+        }
+
+        .btn-download {
+            background: #e50914;
+            color: #ffffff;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 800;
+            font-size: 15px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-download:hover {
+            background: #b80710;
+            transform: translateY(-2px);
+        }
+
+        /* --- Modal Player Overlay --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(8px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #222;
+            box-shadow: 0 0 30px rgba(229, 9, 20, 0.3);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 16px;
+        }
+
+        .player-box {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background-image: url('movie-backgrounds/movie1.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .player-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .play-btn-red {
+            width: 70px;
+            height: 70px;
+            background: #e50914;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 26px;
+            cursor: pointer;
+            box-shadow: 0 0 25px rgba(229, 9, 20, 0.8);
+            transition: transform 0.3s ease;
+            border: none;
+        }
+
+        .play-btn-red:hover { transform: scale(1.15); }
+
+        .player-title-header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        @media (max-width: 768px) {
+            .details-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .cast-list { justify-content: center; }
+            .action-btns { justify-content: center; width: 100%; }
+            .btn-watch, .btn-download { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="movie-backdrop"></div>
+
+    <header>
+        <!-- اللوغو وزر الرجوع حدّاه فـ اليسار -->
+        <div class="header-brand-group">
+            <a href="index.html" class="logo">OPTIVARA<span>.MOVIE</span></a>
+            <a href="index.html" class="btn-back-home">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+
+        <!-- زر Admin A -->
+        <button class="admin-icon-btn" onclick="openAdminModal()">A</button>
+    </header>
+
+    <div class="details-container">
+        <!-- 📌 3️⃣ بوستر الفيلم (movie1.jpg) -->
+        <div class="poster-box">
+            <img src="movie-posters/movie1.jpg" alt="Movie Poster">
+        </div>
+
+        <div class="info-box">
+            <span class="tag-movie">MOVIE</span>
+            
+            <!-- 📌 4️⃣ عنوان الفيلم -->
+            <h1 class="movie-title-text">Spider-Man: Brand New Day</h1>
+
+            <!-- 📌 5️⃣ السنة والمخرج -->
+            <div class="movie-meta-text">2026 Directed by Destin Daniel Cretton</div>
+
+            <div class="section-label">Synopsis</div>
+            <!-- 📌 6️⃣ القصة والوصف -->
+            <p class="synopsis-text">
+                Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control.
+            </p>
+
+            <div class="section-label">Cast</div>
+            <!-- 📌 7️⃣ الممثلين -->
+            <div class="cast-list">
+                <span class="cast-chip">Tom Holland</span>
+                <span class="cast-chip">Zendaya</span>
+                <span class="cast-chip">Sadie Sink</span>
+                <span class="cast-chip">Jacob Batalon</span>
+                <span class="cast-chip">Jon Bernthal</span>
+            </div>
+
+            <div class="action-btns">
+                <!-- زر فتح نافذة المشاهدة -->
+                <button class="btn-watch" onclick="openWatchModal()">
+                    <i class="fa-solid fa-play"></i> Watch Now
+                </button>
+
+                <!-- ========================================================= -->
+                <!-- 📌 8️⃣ زر التحميل المباشر مربوط بالـ Content Locker مباشرة -->
+                <!-- ========================================================= -->
+                <button class="btn-download" onclick="_KB()">
+                    <i class="fa-solid fa-download"></i> Download Now Full HD
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- النافذة (Modal) المشغيل -->
+    <div class="modal-overlay" id="watchModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeWatchModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="player-box">
+                <div class="player-title-header">Spider-Man: Brand New Day</div>
+                <div class="player-overlay">
+                    <!-- ========================================================= -->
+                    <!-- 📌 9️⃣ زر المشاهدة الأحمر الوسطاني مربوط بالـ Content Locker -->
+                    <!-- ========================================================= -->
+                    <button class="play-btn-red" onclick="_KB()">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Control Modal Pop-up -->
+    <div class="admin-modal-overlay" id="adminModal">
+        <div class="admin-modal-card">
+            <div class="admin-header">
+                <div class="admin-title"><i class="fa-solid fa-user-shield"></i> Admin <span>Control</span></div>
+                <button class="admin-close-btn" onclick="closeAdminModal()">
+                    <i class="fa-solid fa-arrow-left"></i> Back
+                </button>
+            </div>
+            <form onsubmit="handleAdminLogin(event)">
+                <div class="admin-input-group">
+                    <label>Username or Email</label>
+                    <input type="text" placeholder="Enter username" required>
+                </div>
+                <div class="admin-input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter password" required>
+                </div>
+                <div class="admin-error-msg" id="adminError">
+                    <i class="fa-solid fa-circle-exclamation"></i> Incorrect username or password.
+                </div>
+                <button type="submit" class="admin-submit-btn">Login to Panel</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openWatchModal() { document.getElementById('watchModal').style.display = 'flex'; }
+        function closeWatchModal() { document.getElementById('watchModal').style.display = 'none'; }
+
+        function openAdminModal() { document.getElementById('adminModal').style.display = 'flex'; }
+        function closeAdminModal() { 
+            document.getElementById('adminModal').style.display = 'none'; 
+            document.getElementById('adminError').style.display = 'none';
+        }
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            document.getElementById('adminError').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #0b0b0e;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* --- Header / Navbar --- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+    transition: 0.4s;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo span { color: #e50914; }
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active { color: #e50914; }
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #333;
+    padding: 8px 35px 8px 15px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 13px;
+    outline: none;
+    width: 180px;
+    transition: 0.3s ease;
+}
+
+.search-box input:focus {
+    width: 240px;
+    border-color: #e50914;
+}
+
+.search-box i {
+    position: absolute;
+    right: 12px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* 📌 زر A الأحمر فـ Navbar */
+.admin-icon-btn {
+    background-color: #e50914;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.admin-icon-btn:hover {
+    background-color: #b80710;
+    transform: scale(1.05);
+}
+
+/* --- Hero Section (Image Background) --- */
+.hero {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    overflow: hidden;
+}
+
+/* 📌 خلفية الصورة العريضة فـ Hero */
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('hero-backgrounds/hero-bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(11, 11, 14, 0.4) 0%, rgba(11, 11, 14, 1) 95%);
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 600px;
+    z-index: 10;
+}
+
+.hero-sub {
+    color: #e50914;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.hero-title span { color: #e50914; }
+
+.hero-desc {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background: #e50914;
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #b80710;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.btn-secondary:hover { background: rgba(255, 255, 255, 0.2); }
+
+/* --- Movies Section --- */
+.section-container {
+    padding: 20px 50px 60px 50px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background-color: #e50914;
+    border-radius: 2px;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    background: #16161c;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+.movie-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 20px rgba(229, 9, 20, 0.3);
+}
+
+.card-img-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* العرض العادي للـ Desktop */
+    overflow: hidden;
+    background-color: #222;
+}
+
+.card-img-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge-top {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #e50914;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.badge-tag {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.75);
+    color: #ffb400;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 7px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.card-info { padding: 12px 15px; }
+
+.card-title {
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-meta {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* --- Admin Control Modal --- */
+.admin-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.admin-modal-card {
+    background: #111115;
+    border: 1px solid #282830;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    padding: 30px 25px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+    position: relative;
+    text-align: left;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.admin-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-title span { color: #e50914; }
+
+.admin-close-btn {
+    background: transparent;
+    border: none;
+    color: #888;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.admin-close-btn:hover { color: #e50914; }
+
+.admin-input-group { margin-bottom: 15px; }
+
+.admin-input-group label {
+    display: block;
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 6px;
+}
+
+.admin-input-group input {
+    width: 100%;
+    padding: 12px;
+    background: #181820;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+.admin-input-group input:focus { border-color: #e50914; }
+
+.admin-error-msg {
+    color: #ff3333;
+    font-size: 12px;
+    margin-bottom: 15px;
+    display: none;
+    align-items: center;
+    gap: 6px;
+}
+
+.admin-submit-btn {
+    width: 100%;
+    background: #e50914;
+    color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-submit-btn:hover { background: #b80710; }
+
+/* ========================================================= */
+/* 📌 Responsive Mobile Style (أبعاد البوستر العمودي للهاتف) */
+/* ========================================================= */
+@media (max-width: 768px) {
+    header { padding: 15px 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 0 20px; height: 60vh; }
+    .hero-title { font-size: 32px; }
+    .section-container { padding: 15px 20px 40px 20px; }
+
+    .movies-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+
+    .movies-grid::-webkit-scrollbar { height: 4px; }
+    .movies-grid::-webkit-scrollbar-thumb {
+        background: #e50914;
+        border-radius: 10px;
+    }
+
+    /* عرض كارت الفيلم فـ التليفون */
+    .movie-card {
+        min-width: 150px;
+        max-width: 160px;
+        scroll-snap-align: start;
+    }
+
+    /* 📌 تحويل ابعاد البوستر فـ التليفون لتصبح واقفة وطولية (145%) */
+    .card-img-wrapper {
+        padding-top: 145%;
+    }
+}

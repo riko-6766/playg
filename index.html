@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPTIVARA MOVIE - Watch Latest Movies</title>
+    <!-- FontAwesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- ملف CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <a href="index.html" class="logo">OPTIVARA<span>.MOVIE</span></a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">TV Series</a></li>
+            <li><a href="#">New Releases</a></li>
+        </ul>
+
+        <div class="header-actions">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search movies..." onkeyup="filterMovies()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <!-- زر Admin A الأحمر -->
+            <button class="admin-icon-btn" onclick="openAdminModal()">A</button>
+        </div>
+    </header>
+
+    <!-- Hero Section (خلفية عبارة عن صورة عريضة hero-bg1.jpg) -->
+    <section class="hero">
+        <div class="hero-bg-img"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <div class="hero-sub">Unlimited Movies, TV Shows, and More.</div>
+            <h1 class="hero-title">OPTIVARA<span>.MOVIE</span></h1>
+            <p class="hero-desc">Watch the latest movies and TV shows online in HD quality with no ads and no limits.</p>
+            <div class="hero-btns">
+                <a href="#movies-section" class="btn-primary"><i class="fa-solid fa-play"></i> Watch Now</a>
+                <a href="#movies-section" class="btn-secondary"><i class="fa-solid fa-compass"></i> Explore Movies</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Movies Grid -->
+    <div class="section-container" id="movies-section">
+        <h2 class="section-title">Trending Now</h2>
+        <div class="movies-grid" id="moviesContainer"></div>
+    </div>
+
+    <!-- Admin Control Modal Pop-up -->
+    <div class="admin-modal-overlay" id="adminModal">
+        <div class="admin-modal-card">
+            <div class="admin-header">
+                <div class="admin-title"><i class="fa-solid fa-user-shield"></i> Admin <span>Control</span></div>
+                <!-- زر الرجوع -->
+                <button class="admin-close-btn" onclick="closeAdminModal()">
+                    <i class="fa-solid fa-arrow-left"></i> Back
+                </button>
+            </div>
+
+            <form onsubmit="handleAdminLogin(event)">
+                <div class="admin-input-group">
+                    <label>Username or Email</label>
+                    <input type="text" placeholder="Enter username" required>
+                </div>
+
+                <div class="admin-input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter password" required>
+                </div>
+
+                <!-- رسالة الخطأ الحمراء -->
+                <div class="admin-error-msg" id="adminError">
+                    <i class="fa-solid fa-circle-exclamation"></i> Incorrect username or password.
+                </div>
+
+                <button type="submit" class="admin-submit-btn">Login to Panel</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ملف الجافاسكربت الخاص بالأفلام -->
+    <script src="script.js"></script>
+
+    <!-- سكريبت التحكم فـ نافذة Admin -->
+    <script>
+        function openAdminModal() { 
+            document.getElementById('adminModal').style.display = 'flex'; 
+        }
+        function closeAdminModal() { 
+            document.getElementById('adminModal').style.display = 'none';
+            document.getElementById('adminError').style.display = 'none';
+        }
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            document.getElementById('adminError').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
