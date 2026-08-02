@@ -8,19 +8,14 @@ const moviesList = [
         badge: "TOP 10",
         rating: "7.5",
         year: "2026"
-    }
-
-    // منين تبغي تزيد فيلم جديد، زيدو هنا
-    /*
-    ,
+    },
     {
         id: "movie2",
-        title: "Avatar 3",
-        badge: "HD",
-        rating: "8.2",
+        title: "The Odyssey",
+        badge: "NEW",
+        rating: "8.5",
         year: "2026"
     }
-    */
 ];
 
 // =============================
