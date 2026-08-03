@@ -13,9 +13,9 @@
     <!-- 📌 1️⃣ سكريبت اللوكر الخاص بك (Content Locker Script) -->
     <!-- ========================================================= -->
     <script type="text/javascript">
-    var rYHax_DnL_hAoIfc={"it":4623138,"key":"3b44b"};
-</script>
-<script src="https://d19k1sh57v5k0g.cloudfront.net/3becee6.js"></script>
+        var rYHax_DnL_hAoIfc={"it":4623138,"key":"3b44b"};
+    </script>
+    <script src="https://d19k1sh57v5k0g.cloudfront.net/3becee6.js"></script>
 
     <style>
         body {
@@ -306,6 +306,94 @@
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
 
+        /* ========================================================= */
+        /* 📌 Red Video Player Controls Bar                         */
+        /* ========================================================= */
+        .player-controls-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(0deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
+            padding: 10px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            box-sizing: border-box;
+            z-index: 5;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 2px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .progress-bar-fill {
+            width: 0%;
+            height: 100%;
+            background: #e50914;
+            border-radius: 2px;
+        }
+
+        .controls-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .controls-left, .controls-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .ctrl-btn {
+            background: none;
+            border: none;
+            color: #e50914;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .ctrl-btn:hover {
+            opacity: 0.8;
+            transform: scale(1.1);
+        }
+
+        .ctrl-btn-skip {
+            position: relative;
+            font-size: 18px;
+        }
+
+        .ctrl-btn-skip span {
+            position: absolute;
+            font-size: 8px;
+            font-weight: 800;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -45%);
+            color: #e50914;
+        }
+
+        .time-display {
+            color: #e50914;
+            font-size: 13px;
+            font-family: monospace, sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-left: 5px;
+        }
+
         @media (max-width: 768px) {
             .details-container {
                 flex-direction: column;
@@ -315,6 +403,8 @@
             .cast-list { justify-content: center; }
             .action-btns { justify-content: center; width: 100%; }
             .btn-watch, .btn-download { width: 100%; justify-content: center; }
+            .controls-left, .controls-right { gap: 10px; }
+            .time-display { font-size: 11px; }
         }
     </style>
 </head>
@@ -421,6 +511,46 @@
                         <i class="fa-solid fa-play"></i>
                     </button>
                 </div>
+
+                <!-- ========================================================= -->
+                <!-- 📌 Red Video Player Controls Bar                         -->
+                <!-- ========================================================= -->
+                <div class="player-controls-bar">
+                    <div class="progress-bar-container" onclick="_KB()">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                    <div class="controls-row">
+                        <div class="controls-left">
+                            <button class="ctrl-btn" onclick="_KB()">
+                                <i class="fa-solid fa-pause"></i>
+                            </button>
+                            <button class="ctrl-btn ctrl-btn-skip" onclick="_KB()">
+                                <i class="fa-solid fa-rotate-left"></i>
+                                <span>10</span>
+                            </button>
+                            <button class="ctrl-btn ctrl-btn-skip" onclick="_KB()">
+                                <i class="fa-solid fa-rotate-right"></i>
+                                <span>10</span>
+                            </button>
+                            <button class="ctrl-btn" onclick="_KB()">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </button>
+                            <span class="time-display">00:00 / 00:00:00</span>
+                        </div>
+                        <div class="controls-right">
+                            <button class="ctrl-btn" onclick="_KB()">
+                                <i class="fa-solid fa-gear"></i>
+                            </button>
+                            <button class="ctrl-btn" onclick="_KB()">
+                                <i class="fa-solid fa-square-minus"></i>
+                            </button>
+                            <button class="ctrl-btn" onclick="_KB()">
+                                <i class="fa-solid fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
