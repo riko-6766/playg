@@ -15,6 +15,13 @@ const moviesList = [
         badge: "NEW",
         rating: "8.5",
         year: "2026"
+    },
+    {
+        id: "movie3",
+        title: "Obsession",
+        badge: "HOT",
+        rating: "7.8",
+        year: "2025"
     }
 ];
 
